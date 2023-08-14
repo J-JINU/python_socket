@@ -16,7 +16,7 @@ class UserManager:  # 사용자관리 및 채팅 메세지 전송을 담당하�
 
     def __init__(self):
         self.users = {}  # 사용자의 등록 정보를 담을 사전 {사용자 이름:(소켓,주소),...}
-
+        
     def addUser(self, username, conn, addr):  # 사용자 ID를 self.users에 추가하는 함수
         if username in self.users:  # 이미 등록된 사용자라면
             conn.send('이미 등록된 사용자입니다.\n'.encode())
