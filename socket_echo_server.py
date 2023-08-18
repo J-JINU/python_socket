@@ -16,5 +16,5 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
             if not msg:
                 break
             print("[{}] massage : {}".format(client_addr, msg))
-            client_socket.send(msg)
-            # client_socket.close()
+            client_socket.sendall(msg)
+        client_socket.close()
